@@ -1,17 +1,22 @@
 
-    var total;
+    
     function total() {
         var math = document.getElementById("math").value;
         var physics = document.getElementById("physics").value;
         var english = document.getElementById("english").value;
         var bangla = document.getElementById("bangla").value;
-        total = +math + +physics + +english + +bangla;
+        var total = +math + +physics + +english + +bangla;
         document.getElementById("total").innerHTML = total;
     }
 
     var average;
     function average() {
-      average = total / 4;
+      var math = document.getElementById("math").value;
+        var physics = document.getElementById("physics").value;
+        var english = document.getElementById("english").value;
+        var bangla = document.getElementById("bangla").value;
+        var avrg = +math + +physics + +english + +bangla;
+        average = avrg / 4;
       document.getElementById("average").innerHTML = average;
     }
     var grade;
