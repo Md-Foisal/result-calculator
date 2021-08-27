@@ -9,34 +9,40 @@
         document.getElementById("total").innerHTML = total;
     }
 
-    var average;
     function average() {
       var math = document.getElementById("math").value;
-        var physics = document.getElementById("physics").value;
-        var english = document.getElementById("english").value;
-        var bangla = document.getElementById("bangla").value;
-        var avrg = +math + +physics + +english + +bangla;
-        average = avrg / 4;
+      var physics = document.getElementById("physics").value;
+      var english = document.getElementById("english").value;
+      var bangla = document.getElementById("bangla").value;
+      var avrg = +math + +physics + +english + +bangla;
+      var average = avrg / 4;
       document.getElementById("average").innerHTML = average;
     }
-    var grade;
+
     function grade() {
-      if (average <= 100 && average >=80) {
+      var math = document.getElementById("math").value;
+      var physics = document.getElementById("physics").value;
+      var english = document.getElementById("english").value;
+      var bangla = document.getElementById("bangla").value;
+      var avrg = +math + +physics + +english + +bangla;
+      var totalAverage = avrg / 4;
+
+      if (totalAverage <= 100 && totalAverage >=80) {
         document.getElementById("grade").innerHTML = "A+";
       }
-      else if (average <= 79 && average >=70) {
+      else if (totalAverage <= 79 && totalAverage >=70) {
         document.getElementById("grade").innerHTML = "A";
       }
-      else if (average <= 69 && average >=60) {
+      else if (totalAverage <= 69 && totalAverage >=60) {
         document.getElementById("grade").innerHTML = "A-";
       }
-      else if (average <= 59 && average >=50) {
+      else if (totalAverage <= 59 && totalAverage >=50) {
         document.getElementById("grade").innerHTML = "B";
       }
-      else if (average <= 49 && average >=40) {
+      else if (totalAverage <= 49 && totalAverage >=40) {
         document.getElementById("grade").innerHTML = "C";
       }
-      else if (average <= 39 && average >=33) {
+      else if (totalAverage <= 39 && totalAverage >=33) {
         document.getElementById("grade").innerHTML = "D";
       }
       else {
